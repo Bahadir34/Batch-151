@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Batch151:project xmlns:Batch151="http://maven.apache.org/POM/4.0.0"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <Batch151:modelVersion>4.0.0</Batch151:modelVersion>
+
+    <Batch151:groupId>org.example</Batch151:groupId>
+    <Batch151:artifactId>Batch151</Batch151:artifactId>
+    <Batch151:version>1.0-SNAPSHOT</Batch151:version>
+
+    <Batch151:properties>
+        <Batch151:maven.compiler.source>11</Batch151:maven.compiler.source>
+        <Batch151:maven.compiler.target>11</Batch151:maven.compiler.target>
+        <Batch151:project.build.sourceEncoding>UTF-8</Batch151:project.build.sourceEncoding>
+        <Batch151:kotlin.version>1.0.0</Batch151:kotlin.version>
+    </Batch151:properties>
+
+    <Batch151:dependencies>
+        <Batch151:dependency>
+            <Batch151:groupId>org.jetbrains.kotlin</Batch151:groupId>
+            <Batch151:artifactId>kotlin-stdlib</Batch151:artifactId>
+            <Batch151:version>${kotlin.version}</Batch151:version>
+        </Batch151:dependency>
+        <Batch151:dependency>
+            <Batch151:groupId>org.jetbrains.kotlin</Batch151:groupId>
+            <Batch151:artifactId>kotlin-test</Batch151:artifactId>
+            <Batch151:version>${kotlin.version}</Batch151:version>
+            <Batch151:scope>test</Batch151:scope>
+        </Batch151:dependency>
+    </Batch151:dependencies>
+
+    <Batch151:build>
+        <Batch151:plugins>
+            <Batch151:plugin>
+                <Batch151:groupId>org.jetbrains.kotlin</Batch151:groupId>
+                <Batch151:artifactId>kotlin-maven-plugin</Batch151:artifactId>
+                <Batch151:version>${kotlin.version}</Batch151:version>
+                <Batch151:executions>
+                    <Batch151:execution>
+                        <Batch151:id>compile</Batch151:id>
+                        <Batch151:phase>compile</Batch151:phase>
+                        <Batch151:goals>
+                            <Batch151:goal>compile</Batch151:goal>
+                        </Batch151:goals>
+                    </Batch151:execution>
+                    <Batch151:execution>
+                        <Batch151:id>test-compile</Batch151:id>
+                        <Batch151:phase>test-compile</Batch151:phase>
+                        <Batch151:goals>
+                            <Batch151:goal>test-compile</Batch151:goal>
+                        </Batch151:goals>
+                    </Batch151:execution>
+                </Batch151:executions>
+                <Batch151:configuration>
+                    <Batch151:jvmTarget>${maven.compiler.target}</Batch151:jvmTarget>
+                </Batch151:configuration>
+            </Batch151:plugin>
+            <Batch151:plugin>
+                <Batch151:groupId>org.apache.maven.plugins</Batch151:groupId>
+                <Batch151:artifactId>maven-compiler-plugin</Batch151:artifactId>
+                <Batch151:executions>
+                    <Batch151:execution>
+                        <Batch151:id>compile</Batch151:id>
+                        <Batch151:phase>compile</Batch151:phase>
+                        <Batch151:goals>
+                            <Batch151:goal>compile</Batch151:goal>
+                        </Batch151:goals>
+                    </Batch151:execution>
+                    <Batch151:execution>
+                        <Batch151:id>testCompile</Batch151:id>
+                        <Batch151:phase>test-compile</Batch151:phase>
+                        <Batch151:goals>
+                            <Batch151:goal>testCompile</Batch151:goal>
+                        </Batch151:goals>
+                    </Batch151:execution>
+                </Batch151:executions>
+            </Batch151:plugin>
+        </Batch151:plugins>
+    </Batch151:build>
+
+</Batch151:project>
