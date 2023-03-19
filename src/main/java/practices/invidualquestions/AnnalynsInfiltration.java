@@ -2,11 +2,6 @@ package practices.invidualquestions;
 
 public class AnnalynsInfiltration
 {
-
-
-
-
-
     public static void main(String[] args)
     {
         boolean knightIsAwake = true;
