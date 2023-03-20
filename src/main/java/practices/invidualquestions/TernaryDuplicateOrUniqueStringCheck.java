@@ -20,7 +20,6 @@ public class TernaryDuplicateOrUniqueStringCheck
 
         else
         {
-
             str = str1.indexOf(str1.substring(0,1)) == str1.lastIndexOf(str1.substring(0,1)) ? "String has unique characters" : "String has duplicate characters"  ;
         }
 
