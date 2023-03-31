@@ -3,7 +3,7 @@
 1) toUpperCase() -> string'in tüm karakterlerini büyük harf yapar.
                     String return eder.
 
-2) toLowerCse() -> string'in tüm karakterlerini küçük harf yapar.
+2) toLowerCase() -> string'in tüm karakterlerini küçük harf yapar.
                     String return eder.
 
 3) charAt(#index) -> string'in istenilen indexindeki karakteri almaya
